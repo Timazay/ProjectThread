@@ -3,7 +3,6 @@ public class Ship implements Runnable {
     private int id;
     private int container;
     boolean isLoad;
-    boolean running;
     Thread thread;
     private int currentContainers;
     private Port port;
@@ -21,7 +20,6 @@ public class Ship implements Runnable {
         }
         thread = new Thread(this);
         thread.start();
-        running = true;
     }
 
     public int getId() {
